@@ -8,7 +8,7 @@ public class HelloController {
 	
 	@GetMapping("/hello")
 	public String hello() {
-		return "Hello to docker-jenkins- spring boot integration"; 
+		return "Hello to docker-jenkins integration"; 
 	}
 	
 
