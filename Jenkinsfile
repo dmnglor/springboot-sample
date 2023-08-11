@@ -17,7 +17,7 @@ pipeline{
             }
         }
     }
-    /*stage('Push image to Docker Hub'){
+    stage('Push image to Docker Hub'){
 	        steps{
 	            script{
 	                withCredentials([string(credentialsId: 'sampledocker-pwd', variable: 'sampledockerpwd')]) {
@@ -26,7 +26,7 @@ pipeline{
                     bat 'docker push dayalathakodagi/springboot-sample'
 	            }
 	        }
-	    }*/
+	    }
     
 }
 }
