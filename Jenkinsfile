@@ -21,7 +21,9 @@ pipeline{
 	        steps{
 	            script{
 	                withCredentials([string(credentialsId: 'sampledocker-pwd', variable: 'sampledockerpwd')]) {
-					bat 'docker login -u dayalathakodagi -p ${sampledockerpwd}'
+					//bat 'docker login -u dayalathakodagi -p ${sampledockerpwd}'
+				       type password.txt | docker login --username dayalathakodagi --password-stdin
+
 				}
                     bat 'docker push dayalathakodagi/springboot-sample'
 	            }
